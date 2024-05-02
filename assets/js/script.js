@@ -1,13 +1,10 @@
 const messages = [
-  {
-    title: "😁",
-    message: "I'm a software developer based in Nairobi, Kenya.",
-  },
-  { title: "🍗", message: "My favorite food is pizza." },
-  { title: "🎮", message: "I love playing video games." },
-  { title: "🎵", message: "I love listening to hip hop music." },
-  { title: "🎥", message: "My favorite movie is The Dictator." },
-  { title: "📺", message: "My favorite TV show is Money Heist." },
+  { title: "", icon: "😁",message: "I'm a software developer based in Nairobi, Kenya.",},
+  { title: "", icon: "🍗", message: "My favorite food is pizza." },
+  { title: "", icon: "🎮", message: "I love playing video games." },
+  { title: "", icon: "🎵", message: "I love listening to hip hop music." },
+  { title: "", icon: "🎥", message: "My favorite movie is The Dictator." },
+  { title: "", icon: "📺", message: "My favorite TV show is Money Heist." },
 ];
 
 const messageContainer = document.querySelector(".message-container");
@@ -30,7 +27,7 @@ function showNextMessage() {
   setTimeout(() => {
     message.style.transform = "translateX(-100%)";
     newMessageElement.style.transform = "translateX(0)";
-  }, 10);
+  }, 100);
 
   setTimeout(() => {
     messageContainer.removeChild(message);
