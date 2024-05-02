@@ -1,13 +1,13 @@
 const messages = [
   {
-    title: "Fun Fact 😁",
+    title: "😁",
     message: "I'm a software developer based in Nairobi, Kenya.",
   },
-  { title: "Fav Food 🍗", message: "My favorite food is pizza." },
-  { title: "Hobbies 🎮", message: "I love playing video games." },
-  { title: "Fav Music 🎵", message: "I love listening to hip hop music." },
-  { title: "Fav Movie 🎥", message: "My favorite movie is The Dictator." },
-  { title: "Fav TV Show 📺", message: "My favorite TV show is Money Heist." },
+  { title: "🍗", message: "My favorite food is pizza." },
+  { title: "🎮", message: "I love playing video games." },
+  { title: "🎵", message: "I love listening to hip hop music." },
+  { title: "🎥", message: "My favorite movie is The Dictator." },
+  { title: "📺", message: "My favorite TV show is Money Heist." },
 ];
 
 const messageContainer = document.querySelector(".message-container");

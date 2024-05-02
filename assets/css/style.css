@@ -59,32 +59,35 @@ header {
 /* Message */
 
 .container {
-    margin-top: 20px;
-    width: 100%;
-}
-
-.title {
-    margin-bottom: 4px;
-}
-
-.message-container {
+    width: 300px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+  }
+  
+  .message-container {
     position: relative;
+    overflow: hidden;
     height: 50px;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.message {
+    width: 300px;
+  }
+  
+  .message {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 5px 0;
+    width: 300px;
+    height: 100%;
+    padding: 10px 0;
     transition: transform 0.5s ease-in-out;
-}
-
-.btn {
+  }
+  
+  .btn {
     margin-top: 20px;
-}
+  }
 
 /* Main left right */
 
@@ -181,12 +184,14 @@ header {
         align-items: start;
         gap: 20px;
         width: 100% !important;
+        overflow: hidden;
         margin: 0px;
     }
 
     .main>.left {
-        width: 100% !important;
+        width: 340px !important;
         padding: 5px 20px;
+        overflow: hidden;
     }
 
     .main>.right {
