@@ -1,5 +1,5 @@
 const messages = [
-  { title: "Fun fact", icon: "😁",message: "I'm a software developer based in Nairobi, Kenya.",},
+  { title: "Fun fact", icon: "😁",message: "I'm a developer based in Nairobi, Kenya.",},
   { title: "Food", icon: "🍗", message: "My favorite food is pizza." },
   { title: "Gamer", icon: "🎮", message: "I love playing video games." },
   { title: "Music", icon: "🎵", message: "I like diverse content" },
