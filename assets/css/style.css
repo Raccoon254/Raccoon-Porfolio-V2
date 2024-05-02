@@ -11,6 +11,9 @@ body {
                 linear-gradient(90deg, rgba(82, 180, 3, 0.1) 1px, transparent 1px),
                 rgb(19, 19, 19);
     background-size: 100px 100px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -43,7 +46,6 @@ header{
     width: 50px;
     height: 50px;
     border-radius: 35px;
-    overflow: hidden;
     justify-content: center;
     padding: 5px;
 }
@@ -92,6 +94,11 @@ header{
     margin: 0;
 }
 
+.user-image{
+    width: 400px;
+    border: 2px solid #ffffff24;
+}
+
 .rectangle{
     /* 3 : 4 */
     width: 400px;
@@ -122,17 +129,65 @@ header{
 }
 
 
-/* Pointer Mouser */
+/* on small screens */
+@media (max-width: 768px) {
 
-.pointer{
-    width: 20px;
-    height: 40px;
-    background-color: #ffffff00;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-    position: absolute;
-    z-index: -1;
-    bottom: -40px;
-    right: 50%;
-    transform: translateX(50%);
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header{
+        padding: 5px 20px;
+        width: 100% !important;
+        overflow: hidden;
+        margin: 0px;
+    }
+
+    .main{
+        flex-direction: column;
+        padding: 5px;
+        align-items: start;
+        gap: 20px;
+        width: 100% !important;
+        margin: 0px;
+    }
+
+    .main>.left{
+        width: 100% !important;
+        padding: 5px 20px;
+    }
+
+    .main>.right{
+        width: 100% !important;
+        padding: 5px 35px;
+        margin: 0 10px !important;
+    }
+
+    .main>.left>h1{
+        font-size: 2.5rem !important;
+        margin: 0;
+    }
+
+    .main>.left>.message{
+        margin-top: 30px;
+    }
+
+    .user-image{
+        width: 300px;
+    }
+
+    .rectangle{
+        width: 300px;
+        height: 400px;
+        left: 10px;
+    }
+
+    .circle{
+        width: 80px;
+        height: 80px;
+        bottom: -40px;
+        right: 20px;
+    }
 }
