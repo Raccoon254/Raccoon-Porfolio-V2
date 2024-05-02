@@ -12,8 +12,7 @@ body {
         rgb(19, 19, 19);
     background-size: 100px 100px;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -61,7 +60,7 @@ header {
 .container {
     width: 98%;
     overflow: hidden;
-    margin: 20px 0;
+    margin-top: 20px;
     display: flex;
     gap: 10px;
     background: #ffffff0a;
@@ -108,7 +107,7 @@ header {
     position: absolute;
     left: 0;
     top: 0;
-    width: 300px;
+    width: calc(100% - 20px);
     height: 100%;
     padding: 10px 0;
     transition: transform 0.5s ease-in-out;
@@ -213,7 +212,7 @@ header {
         align-items: start;
         gap: 20px;
         width: 100% !important;
-        overflow: hidden;
+        overflow-x: hidden;
         margin: 0px;
     }
 
@@ -225,7 +224,7 @@ header {
 
     .main>.right {
         width: 100% !important;
-        padding: 5px 35px;
+        padding: 0 35px;
         margin: 0 10px !important;
     }
 

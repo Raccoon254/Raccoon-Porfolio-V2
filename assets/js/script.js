@@ -28,7 +28,7 @@ function showNextMessage() {
   setTimeout(() => {
     message.style.transform = "translateX(-100%)";
     newMessageElement.style.transform = "translateX(0)";
-  }, 100);
+  }, 40);
 
   setTimeout(() => {
     messageContainer.removeChild(message);
