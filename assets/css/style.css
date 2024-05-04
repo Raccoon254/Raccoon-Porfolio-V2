@@ -9,12 +9,14 @@
     --color-bg: #ffffff;
     --color-fg: #000000;
     --grid-lines: rgba(82, 180, 3, 0.1);
+    --border-color: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
     --color-bg: #000000;
     --color-fg: #ffffff;
     --grid-lines: rgba(82, 180, 3, 0.1);
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Button styles */
@@ -23,23 +25,48 @@
     background-color: transparent;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-[data-theme-toggle] i {
-    animation: rotate 0.6s linear;
-}
-
-/* Animations */
-@keyframes rotate {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  [data-theme-toggle] i {
+    color: var(--color-fg);
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Animations */
+  @keyframes move-out-right {
     0% {
-        transform: rotate(0deg);
+      transform: translateX(0) scale(1);
+      opacity: 1;
     }
-
     100% {
-        transform: rotate(360deg);
+      transform: translateX(20px) scale(0.5);
+      opacity: 0;
     }
-}
+  }
+  
+  @keyframes move-in-left {
+    0% {
+      transform: translateX(-20px) scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+
+
 
 
 body {
@@ -68,9 +95,16 @@ header {
     padding: 5px 50px;
 }
 
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .menu>ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .menu>ul>li {
@@ -111,7 +145,7 @@ header {
     background: #ffffff0a;
     border-radius: 22px;
     padding: 10px;
-    border: 2px solid #ffffff07;
+    border: 2px solid var(--border-color);
 }
 
 .icon {
@@ -123,7 +157,7 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    border: 2px solid #ffffff07;
+    border: 2px solid var(--border-color);
 }
 
 .data {
@@ -202,7 +236,7 @@ header {
 
 .user-image {
     width: 400px;
-    border: 2px solid #ffffff24;
+    border: 2px solid var(--border-color);
 }
 
 .rectangle {
@@ -212,7 +246,7 @@ header {
     background-color: #fff;
     margin: 10px 0;
     background-color: #ffffff00;
-    border: 2px solid #ffffff24;
+    border: 2px solid var(--border-color);
     margin: 10px 0;
     border-radius: 20px;
     position: absolute;
@@ -225,7 +259,7 @@ header {
     width: 100px;
     height: 100px;
     background-color: #ffffff00;
-    border: 2px solid #ffffff24;
+    border: 2px solid var(--border-color);
     border-radius: 50%;
     margin: 10px 0;
     position: absolute;

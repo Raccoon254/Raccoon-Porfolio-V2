@@ -64,14 +64,31 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
 }
 
 /**
-* Utility function to update the button text and aria-label.
-*/
+ * Utility function to update the button text and aria-label.
+ */
 function updateButton({ buttonEl, isDark }) {
-  const iconClass = isDark ? "fas fa-moon light-mode-icon" : "fas fa-sun dark-mode-icon";
-  buttonEl.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
-  buttonEl.innerHTML = `<i class="${iconClass}"></i>`;
-}
+  const currentIcon = buttonEl.querySelector("i");
+  const iconClass = isDark ? "fas fa-moon" : "fas fa-sun";
+  const newIcon = document.createElement("i");
+  newIcon.className = iconClass;
+  newIcon.style.animationName = "move-in-left";
 
+  const handleAnimationEnd = () => {
+    buttonEl.innerHTML = "";
+    buttonEl.appendChild(newIcon);
+    buttonEl.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
+    currentIcon.removeEventListener("animationend", handleAnimationEnd);
+  };
+
+  if (currentIcon) {
+    currentIcon.style.animationName = "move-out-right";
+    currentIcon.addEventListener("animationend", handleAnimationEnd);
+  } else {
+    buttonEl.innerHTML = "";
+    buttonEl.appendChild(newIcon);
+    buttonEl.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
+  }
+}
 /**
 * Utility function to update the theme setting on the html tag
 */
