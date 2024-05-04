@@ -1,14 +1,14 @@
 const messages = [
   {
     title: "Fun fact",
-    icon: "😁",
+    icon: "⚡️",
     message: "I'm a developer based in Nairobi, Kenya.",
   },
   { title: "Food", icon: "🍗", message: "My favorite food is grilled meat." },
   { title: "Gamer", icon: "🎮", message: "I love playing video games." },
   { title: "Music", icon: "🎵", message: "I like diverse content" },
   { title: "Movie", icon: "🎬", message: "My favorite movie is The Dictator." },
-  { title: "Show", icon: "", message: "My favorite TV show is Money Heist." },
+  { title: "Show", icon: "🍿", message: "My favorite TV show is Money Heist." },
 ];
 
 const messageContainer = document.querySelector(".message-container");
