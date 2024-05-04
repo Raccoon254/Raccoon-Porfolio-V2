@@ -9,7 +9,7 @@
     --color-bg: #ffffff;
     --color-fg: #000000;
     --grid-lines: rgba(82, 180, 3, 0.1);
-    --border-color: rgba(0, 0, 0, 0.1);
+    --border-color: rgba(0, 0, 0, 0.038);
 }
 
 [data-theme="dark"] {
@@ -66,7 +66,9 @@
   }
 
 
-
+*{
+    transition: border 0.3s ease;
+}
 
 
 body {
@@ -114,7 +116,7 @@ header {
 
 .menu>ul>li>a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-fg);
 }
 
 .logo {
