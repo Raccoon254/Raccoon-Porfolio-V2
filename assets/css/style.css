@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+:root {
+    --grid-unit: 1rem;
+    --border-radius-base: 0.5rem;
+  }
+  
+  [data-theme="light"] {
+    --color-bg: #ffffff;
+    --color-fg: #000000;
+    --grid-lines: rgba(82, 180, 3, 0.1);
+  }
+  
+  [data-theme="dark"] {
+    --color-bg: #000000;
+    --color-fg: #ffffff;
+    --grid-lines: rgba(82, 180, 3, 0.1);
+  }
+  
+  /* example use of CSS custom properties */
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
+  
 body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -7,9 +29,9 @@ body {
     font-style: normal;
     background-color: hsl(0, 2%, 10%);
     color: #fff;
-    background: linear-gradient(0deg, rgba(82, 180, 3, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(82, 180, 3, 0.1) 1px, transparent 1px),
-        rgb(19, 19, 19);
+    background: linear-gradient(0deg, var(--grid-lines) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-lines) 1px, transparent 1px),
+        var(--color-bg);
     background-size: 100px 100px;
     width: 100%;
     overflow-x: hidden;
