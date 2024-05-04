@@ -67,10 +67,9 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
 * Utility function to update the button text and aria-label.
 */
 function updateButton({ buttonEl, isDark }) {
-  const newCta = isDark ? "Change to light theme" : "Change to dark theme";
-  const iconClass = isDark ? "fas fa-moon" : "fas fa-sun"; // Add the appropriate Font Awesome icon class
-  buttonEl.setAttribute("aria-label", newCta);
-  buttonEl.innerHTML = `${newCta} <i class="${iconClass}"></i>`; // Display the icon along with the text
+  const iconClass = isDark ? "fas fa-moon light-mode-icon" : "fas fa-sun dark-mode-icon";
+  buttonEl.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
+  buttonEl.innerHTML = `<i class="${iconClass}"></i>`;
 }
 
 /**
