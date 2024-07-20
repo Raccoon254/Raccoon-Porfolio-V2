@@ -60,6 +60,13 @@ function positionIcons() {
       icon.style.left = `${x}px`;
       icon.style.top = `${y}px`;
   });
+
+  //make the icons rotate
+  container.style.animation = 'rotation 20s infinite linear';
+  //prevent the icons from rotating as the container rotates
+  icons.forEach(icon => {
+      icon.style.animation = 'reverse-rotation 20s infinite linear';
+  });
 }
 
 window.addEventListener('load', positionIcons);

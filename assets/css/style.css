@@ -3,6 +3,7 @@
 :root {
     --grid-unit: 1rem;
     --border-radius-base: 0.5rem;
+    --border-color: #000000;
 }
 
 [data-theme="light"] {
@@ -227,8 +228,8 @@ header {
 
 .right-container {
     position: relative;
-    width: 440px;
-    height: 440px;
+    width: 500px;
+    height: 500px;
 }
 
 .main>.left>h1 {
@@ -247,8 +248,8 @@ header {
 }
 
 .user-image {
-    width: 400px;
-    height: 400px;
+    width: 420px;
+    height: 420px;
     object-fit: cover;
     border: 2px solid var(--border-color);
     border-radius: 50%;
@@ -269,9 +270,11 @@ header {
 
 .icon-container i {
     position: absolute;
-    font-size: 24px;
+    font-size: 35px;
+    background-color: var(--color-bg);
+    border: 2px solid var(--border-color);
     border-radius: 50%;
-    padding: 8px;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -337,5 +340,24 @@ header {
         height: 80px;
         bottom: -40px;
         right: 20px;
+    }
+}
+
+/* rotation */
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* reverse-rotation */
+@keyframes reverse-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
     }
 }
