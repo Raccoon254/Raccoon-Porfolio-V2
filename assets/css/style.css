@@ -220,6 +220,7 @@ header {
 
 .main>.right {
     padding: 5px 50px;
+    height: 100%;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -239,37 +240,19 @@ header {
 .user-image {
     width: 400px;
     border: 2px solid var(--border-color);
+    border-radius: 500px !important;
+    height: 400px;
+    object-fit: cover;
 }
 
-.rectangle {
-    /* 3 : 4 */
-    width: 400px;
-    height: 534px;
+.image-container {
     background-color: #fff;
-    margin: 10px 0;
+    padding: 20px;
     background-color: #ffffff00;
     border: 2px solid var(--border-color);
-    margin: 10px 0;
-    border-radius: 20px;
-    position: absolute;
+    border-radius: 500px;
     z-index: -1;
-    bottom: 20px;
-    left: 20px;
 }
-
-.circle {
-    width: 100px;
-    height: 100px;
-    background-color: #ffffff00;
-    border: 2px solid var(--border-color);
-    border-radius: 50%;
-    margin: 10px 0;
-    position: absolute;
-    z-index: -1;
-    bottom: -30px;
-    right: -5px;
-}
-
 
 /* on small screens */
 @media (max-width: 768px) {
