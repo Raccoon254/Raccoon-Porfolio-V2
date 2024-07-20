@@ -44,3 +44,23 @@ function showNextMessage() {
 
 //change the message every 5 seconds
 setInterval(showNextMessage, 2000);
+
+//Icons on a circle
+function positionIcons() {
+  const container = document.querySelector('.icon-container');
+  const icons = container.querySelectorAll('i');
+  const radius = container.offsetWidth / 2;
+  const iconCount = icons.length;
+
+  icons.forEach((icon, index) => {
+      const angle = (index / iconCount) * 2 * Math.PI;
+      const x = radius + radius * Math.cos(angle) - icon.offsetWidth / 2;
+      const y = radius + radius * Math.sin(angle) - icon.offsetHeight / 2;
+
+      icon.style.left = `${x}px`;
+      icon.style.top = `${y}px`;
+  });
+}
+
+window.addEventListener('load', positionIcons);
+window.addEventListener('resize', positionIcons);
