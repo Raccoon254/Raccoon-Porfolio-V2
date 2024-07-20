@@ -159,5 +159,5 @@ document.querySelector(".name").onmouseover = event => {
     }
     
     iteration += 1 / 3;
-  }, 30);
+  }, 60);
 }

@@ -277,6 +277,8 @@ header {
 	transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
+.wave{}
+
 /* Hover state each icon */
 .icon-container i:hover {
 	transform: scale(1.6);
