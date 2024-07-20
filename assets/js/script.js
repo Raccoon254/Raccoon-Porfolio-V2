@@ -117,6 +117,11 @@ function createBackground() {
 					char.textContent = specialChars[Math.floor(Math.random() * specialChars.length)];
 				}
 			}, Math.random() * 5000 + 1000);
+
+			//Random color
+			setInterval(() => {
+				char.style.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+			}, Math.random() * 5000 + 1000);
 		}
 	}
 }
