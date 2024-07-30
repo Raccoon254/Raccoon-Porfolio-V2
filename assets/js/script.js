@@ -188,3 +188,15 @@ function changeName() {
 }
 
 setInterval(changeName, 5000);
+
+//Change user images
+const images = ['Raccoon254.jpeg','Raccoon.png','Raccoon2.jpg','Raccoon3.png','Basic.JPG']
+let image_index = 0
+const image = document.querySelector('.user-image')
+
+function changeImage() {
+	image_index = (image_index + 1) % images.length
+	image.src = `assets/images/${images[image_index]}`
+}
+
+setInterval(changeImage, 5000)
