@@ -310,7 +310,7 @@ header {
 	.main {
 		flex-direction: column;
 		padding: 5px;
-		align-items: start;
+		align-items: center;
 		gap: 20px;
 		width: 100% !important;
 		overflow-x: hidden;
@@ -320,7 +320,6 @@ header {
 	.main > .left {
 		width: 99% !important;
 		padding: 5px 20px;
-		overflow: hidden;
 	}
 
 	.main > .right {
