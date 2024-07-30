@@ -2,13 +2,14 @@ const messages = [
 	{
 		title: 'Fun fact',
 		icon: '⚡️',
+		gif: '<iframe src="https://giphy.com/embed/26tn33aiTi1jkl6H6" width="480" height="269" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/screen-monitor-closeup-26tn33aiTi1jkl6H6">via GIPHY</a></p>',
 		message: "I'm a developer based in Nairobi, Kenya.",
 	},
-	{ title: 'Food', icon: '🍗', message: 'My favorite food is grilled meat.' },
-	{ title: 'Gamer', icon: '🎮', message: 'I love playing video games.' },
-	{ title: 'Music', icon: '🎵', message: 'I like diverse content' },
-	{ title: 'Movie', icon: '🎬', message: 'My favorite movie is The Dictator.' },
-	{ title: 'Show', icon: '🍿', message: 'My favorite TV show is Money Heist.' },
+	{ title: 'Food', icon: '🍗',gif: '<iframe src="https://giphy.com/embed/3osxY7eI6enqNBo2mQ" width="480" height="379" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/afv-funny-lol-fail-3osxY7eI6enqNBo2mQ">via GIPHY</a></p>', message: 'My favorite food is grilled meat.' },
+	{ title: 'Gamer', icon: '🎮', gif: '<iframe src="https://giphy.com/embed/fDxtUfyFNbNy99dG03" width="480" height="269" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xbox-game-xbox-series-x-s-fDxtUfyFNbNy99dG03">via GIPHY</a></p>', message: 'I love playing video games.' },
+	{ title: 'Music', icon: '🎵', gif: '<iframe src="https://giphy.com/embed/RLcQGYmQU36d3FceiP" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/workingtitlefilms-mr-bean-rowan-atkinson-beans-holiday-RLcQGYmQU36d3FceiP">via GIPHY</a></p>', message: 'I like diverse content' },
+	{ title: 'Movie', icon: '🎬', gif: '<iframe src="https://giphy.com/embed/8FX0j4oARp3J6" width="480" height="360" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/movie-film-8FX0j4oARp3J6">via GIPHY</a></p>', message: 'My favorite movie is The Dictator.' },
+	{ title: 'Show', icon: '🍿', gif: '<iframe src="https://giphy.com/embed/CCFFPwOK9xbamQksxU" width="480" height="271" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/TheSwoon-netflix-swoon-theswoon-CCFFPwOK9xbamQksxU">via GIPHY</a></p>', message: 'My favorite TV show is Money Heist.' },
 ]
 
 const messageContainer = document.querySelector('.message-container')
