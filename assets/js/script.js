@@ -201,8 +201,7 @@ function changeImage() {
 	setTimeout(() => {
 		image.src = `assets/images/${images[image_index]}`
 		image.style.animation = 'fadeIn 3s'
-	}, 100)
-
+	}, 300)
 }
 
 setInterval(changeImage, 5000)
