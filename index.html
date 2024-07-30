@@ -57,6 +57,10 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<!-- Tailwind CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 
 	<body>
@@ -115,44 +119,125 @@
 			</div>
 		</div>
 
-		<section id="about">
-			<h2>About</h2>
-			<p>Hello! I'm Steve Tom, also known as Raccoon254. As a computer science graduate and passionate software developer, I'm dedicated to crafting efficient and scalable web applications. My journey in tech is driven by a ceaseless curiosity and a desire to tackle real-world challenges through innovative technology. I thrive on exploring cutting-edge technologies and deploying them to solve complex problems, delivering solutions that make a tangible difference.</p>
-			
-			<h3>Skills</h3>
-			<ul>
-				<li><strong>Languages:</strong> Proficient in Java, JavaScript, HTML, CSS, and PHP</li>
-				<li><strong>Frameworks:</strong> Extensive experience with React and Laravel</li>
-				<li><strong>Tools:</strong> Git for version control, JetBrains IDEs, and Copilot for AI-assisted coding</li>
-			</ul>
+		<div>
+			<section id="about" class="mb-12 px-4">
+				<h2 class="text-3xl font-bold mb-4">About Me</h2>
+				<div class="ring shadow-md rounded-lg p-6">
+						<p class="mb-4">Hello! I'm Steve Tom, also known as Raccoon254. As a computer science graduate and passionate software developer, I'm dedicated to crafting efficient and scalable web applications. My journey in tech is driven by a ceaseless curiosity and a desire to tackle real-world challenges through innovative technology.</p>
+						
+						<h3 class="text-xl font-semibold mb-2">Skills</h3>
+						<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+								<div class="flex items-center">
+										<i class="devicon-java-plain colored text-4xl mr-2"></i>
+										<span>Java</span>
+								</div>
+								<div class="flex items-center">
+										<i class="devicon-javascript-plain colored text-4xl mr-2"></i>
+										<span>JavaScript</span>
+								</div>
+								<div class="flex items-center">
+										<i class="devicon-html5-plain colored text-4xl mr-2"></i>
+										<span>HTML5</span>
+								</div>
+								<div class="flex items-center">
+										<i class="devicon-css3-plain colored text-4xl mr-2"></i>
+										<span>CSS3</span>
+								</div>
+								<div class="flex items-center">
+										<i class="devicon-php-plain colored text-4xl mr-2"></i>
+										<span>PHP</span>
+								</div>
+								<div class="flex items-center">
+										<i class="devicon-react-original colored text-4xl mr-2"></i>
+										<span>React</span>
+								</div>
+								<div class="flex items-center">
+										<i class="devicon-laravel-plain colored text-4xl mr-2"></i>
+										<span>Laravel</span>
+								</div>
+								<div class="flex items-center">
+										<i class="devicon-git-plain colored text-4xl mr-2"></i>
+										<span>Git</span>
+								</div>
+						</div>
+				</div>
 		</section>
-		
-		<section id="projects">
-			<h2>Projects</h2>
-			
-			<h3>Scholarspace.io</h3>
-			<p>A web application built with Laravel, designed to facilitate assignment help services. It offers features for real-time chat, payment processing, notifications, and more.</p>
-			
-			<h3>Project InternLink</h3>
-			<p>A platform revolutionizing how students secure internships and attachments. It simplifies the application process, bridging students with their future careers.</p>
-			
-			<h3>FutureSpace</h3>
-			<p>A digital innovation company focusing on solving today's challenges through technology. Services include digital innovation, automation, cybersecurity consultancy, digital marketing, and web development.</p>
-			
-			<h3>Cline</h3>
-			<p>A client management tool for freelancers, designed to streamline operations, improve efficiency, and enhance communication.</p>
+
+		<section id="projects" class="mb-12 px-4">
+				<h2 class="text-3xl font-bold mb-4">Projects</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div class="ring shadow-md rounded-lg overflow-hidden">
+								<img src="/api/placeholder/400/200" alt="Scholarspace.io" class="w-full h-48 object-cover"/>
+								<div class="p-6">
+										<h3 class="text-xl font-semibold mb-2">Scholarspace.io</h3>
+										<p class="mb-4">A Laravel-based web application facilitating assignment help services. Features include real-time chat, payment processing, and notification systems.</p>
+										<a href="#" class="text-blue-500 hover:underline">Visit Project</a>
+										<a href="#" class="ml-4 text-gray-500 hover:text-gray-700">
+												<i class="devicon-github-original"></i> GitHub
+										</a>
+								</div>
+						</div>
+						
+						<div class="ring shadow-md rounded-lg overflow-hidden">
+								<img src="/api/placeholder/400/200" alt="Project InternLink" class="w-full h-48 object-cover"/>
+								<div class="p-6">
+										<h3 class="text-xl font-semibold mb-2">Project InternLink</h3>
+										<p class="mb-4">A revolutionary platform connecting students with internship opportunities. Simplifies the application process and bridges students with their future careers.</p>
+										<a href="#" class="text-blue-500 hover:underline">Visit Project</a>
+										<a href="#" class="ml-4 text-gray-500 hover:text-gray-700">
+												<i class="devicon-github-original"></i> GitHub
+										</a>
+								</div>
+						</div>
+
+						<div class="ring shadow-md rounded-lg overflow-hidden">
+								<img src="/api/placeholder/400/200" alt="FutureSpace" class="w-full h-48 object-cover"/>
+								<div class="p-6">
+										<h3 class="text-xl font-semibold mb-2">FutureSpace</h3>
+										<p class="mb-4">A digital innovation company focusing on solving today's challenges. Services include digital innovation, automation, cybersecurity, and web development.</p>
+										<a href="#" class="text-blue-500 hover:underline">Visit Project</a>
+										<a href="#" class="ml-4 text-gray-500 hover:text-gray-700">
+												<i class="devicon-github-original"></i> GitHub
+										</a>
+								</div>
+						</div>
+
+						<div class="ring shadow-md rounded-lg overflow-hidden">
+								<img src="/api/placeholder/400/200" alt="Cline" class="w-full h-48 object-cover"/>
+								<div class="p-6">
+										<h3 class="text-xl font-semibold mb-2">Cline</h3>
+										<p class="mb-4">A comprehensive client management tool for freelancers. Streamlines operations, improves efficiency, and enhances communication with clients.</p>
+										<a href="#" class="text-blue-500 hover:underline">Visit Project</a>
+										<a href="#" class="ml-4 text-gray-500 hover:text-gray-700">
+												<i class="devicon-github-original"></i> GitHub
+										</a>
+								</div>
+						</div>
+				</div>
 		</section>
-		
-		<section id="contact">
-			<h2>Contact</h2>
-			<p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-			
-			<ul>
-				<li>GitHub: <a href="https://github.com/Raccoon254" target="_blank">Raccoon254</a></li>
-				<li>Email: [Your email address]</li>
-				<li>LinkedIn: [Your LinkedIn profile]</li>
-			</ul>
+
+		<section id="contact" class="mb-12 px-4">
+				<h2 class="text-3xl font-bold mb-4">Contact</h2>
+				<div class="ring shadow-md rounded-lg p-6">
+						<p class="mb-4">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+						<div class="flex flex-col space-y-2">
+								<a href="https://github.com/Raccoon254" target="_blank" class="flex items-center text-gray-700 hover:text-gray-900">
+										<i class="devicon-github-original text-2xl mr-2"></i>
+										<span>Raccoon254</span>
+								</a>
+								<a href="mailto:youremail@example.com" class="flex items-center text-gray-700 hover:text-gray-900">
+										<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+										<span>youremail@example.com</span>
+								</a>
+								<a href="#" class="flex items-center text-gray-700 hover:text-gray-900">
+										<i class="devicon-linkedin-plain text-2xl mr-2"></i>
+										<span>LinkedIn Profile</span>
+								</a>
+						</div>
+				</div>
 		</section>
+		</div>
+
 		<script src="assets/js/script.js"></script>
 		<script src="assets/js/theme.js"></script>
 	</body>
