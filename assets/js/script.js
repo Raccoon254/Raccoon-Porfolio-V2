@@ -66,7 +66,6 @@ function positionIcons() {
 	//prevent the icons from rotating as the container rotates
 	icons.forEach((icon) => {
 		icon.style.animation = 'reverse-rotation 20s infinite linear'
-		icon.setAttribute('data-tip', "I'm a developer based in Nairobi, Kenya.")
 	})
 
 	container.addEventListener('mouseover', () => {
