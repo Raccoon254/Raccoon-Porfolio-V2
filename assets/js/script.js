@@ -196,7 +196,13 @@ const image = document.querySelector('.user-image')
 
 function changeImage() {
 	image_index = (image_index + 1) % images.length
-	image.src = `assets/images/${images[image_index]}`
+	//animate the image
+	image.style.animation = 'fadeOut 3s'
+	setTimeout(() => {
+		image.src = `assets/images/${images[image_index]}`
+		image.style.animation = 'fadeIn 3s'
+	}, 100)
+
 }
 
 setInterval(changeImage, 5000)
