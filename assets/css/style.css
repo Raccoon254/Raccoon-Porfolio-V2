@@ -409,3 +409,23 @@ header {
 		opacity: 1;
 	}
 }
+
+/* Define keyframes for fade-out and fade-in animations */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Apply animations to the .name class */
+.name.fade-out {
+  animation: fadeOut 2s forwards;
+}
+
+.name.fade-in {
+  animation: fadeIn 2s forwards;
+}

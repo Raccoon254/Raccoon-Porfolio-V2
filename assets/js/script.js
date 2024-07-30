@@ -16,6 +16,7 @@ let message = messageContainer.querySelector('.message')
 const titleElement = document.querySelector('.title')
 const iconElement = document.querySelector('.icon')
 
+
 let currentIndex = 0
 
 function showNextMessage() {
@@ -161,3 +162,29 @@ document.querySelector(".name").onmouseover = event => {
     iteration += 1 / 3;
   }, 60);
 }
+
+const name_section = document.querySelector(".name_section");
+const nameSection = document.getElementById('name_section');
+const nameSpan = document.getElementById('name');
+
+function changeName() {
+  // Add fade-out class
+  nameSpan.classList.add('fade-out');
+
+  // Wait for the fade-out animation to complete
+  setTimeout(() => {
+	// Change the name
+	if (nameSection.innerHTML.includes('Raccoon')) {
+	  nameSection.innerHTML = 'I\'m <span id="name" data-value="Steve Tom" class="name fade-in">Steve Tom</span>';
+	} else {
+	  nameSection.innerHTML = 'Alias <span id="name" data-value="Raccoon" class="name fade-in">Raccoon</span>';
+	}
+
+	// Remove fade-out class and add fade-in class
+	const newNameSpan = document.getElementById('name');
+	newNameSpan.classList.remove('fade-out');
+	newNameSpan.classList.add('fade-in');
+  }, 1000); // Match this duration with the fade-out animation duration
+}
+
+setInterval(changeName, 5000);
