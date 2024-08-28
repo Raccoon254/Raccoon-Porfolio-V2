@@ -188,20 +188,3 @@ function changeName() {
 }
 
 setInterval(changeName, 5000);
-
-//Change user images
-const images = ['Raccoon254.jpeg','Raccoon.png','Raccoon2.jpg','Raccoon3.png','Basic.JPG']
-let image_index = 0
-const image = document.querySelector('.user-image')
-
-function changeImage() {
-	image_index = (image_index + 1) % images.length
-	//animate the image
-	image.style.animation = 'fadeOut 3s'
-	setTimeout(() => {
-		image.src = `assets/images/${images[image_index]}`
-		image.style.animation = 'fadeIn 3s'
-	}, 300)
-}
-
-setInterval(changeImage, 5000)

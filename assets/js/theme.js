@@ -28,8 +28,6 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
     
     const logoImage = document.querySelector(".logo-image");
     logoImage.src = `${isDark ? "assets/images/logo-light.png" : "assets/images/logo-dark.png" }`
-    const user_image = document.querySelector(".user-image");
-    user_image.src = `${isDark ? "assets/images/user-light.png" : "assets/images/user-dark.png" }`
   
     const handleAnimationEnd = () => {
       buttonEl.innerHTML = "";
